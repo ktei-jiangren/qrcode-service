@@ -7,6 +7,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -33,6 +34,10 @@ import java.nio.file.Path;
 public class Application extends SpringBootServletInitializer {
 
     private static final String QR_CODE_IMAGE_PATH = "D:\\temp\\MyQRCode.png";
+
+    // silence console logging
+    @Value("${logging.level.root:OFF}")
+    String message = "";
 
     /*
      * Create required HandlerMapping, to avoid several default HandlerMapping instances being created
