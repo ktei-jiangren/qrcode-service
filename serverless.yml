@@ -53,5 +53,4 @@ Resources:
           Properties:
             Path: /{proxy+}
             Method: ANY
-      Timeout: 30
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/${LambdaExecutionRole}
