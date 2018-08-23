@@ -44,7 +44,7 @@ Resources:
     Properties:
       Handler: com.bentoclan.lnf.qrcodesvc.StreamLambdaHandler::handleRequest
       Runtime: java8
-      CodeUri: build/libs/app-0.1.0.jar
+      CodeUri: 'build/distributions/qrcode-service-1.0-SNAPSHOT.zip'
       MemorySize: 512
       Events:
         ProxyApi:
